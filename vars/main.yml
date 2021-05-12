@@ -1,4 +1,7 @@
 ---
+vbox_repo_url: >-
+  http://download.virtualbox.org/virtualbox/rpm
+  /fedora/{{ ansible_facts['distribution_major_version'] }}/$basearch
 
 vboxdrv_required_packages_fedora34:
   - binutils
