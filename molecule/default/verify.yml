@@ -11,7 +11,7 @@
       changed_when: false
 
     - name: Get service fact
-      servicefacts:
+      service_facts:
 
     - name: Assertion
       assert:
