@@ -1,0 +1,3 @@
+---
+- include: install_Fedora34.yml
+  when: ansible_facts['distribution'] == "Fedora" and ansible_facts['distribution_version'] is version('34', '==')

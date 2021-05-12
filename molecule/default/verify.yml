@@ -1,0 +1,20 @@
+---
+# This is an example playbook to execute Ansible tests.
+
+- name: Verify
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: Check vboxmanage binary
+      shell: '[ -x "$(command -v vboxmanage)" ] && echo "True" || echo "False"'
+      register: vbox_is_installed_command
+      changed_when: false
+    
+    - name: Get service fact
+      servicefacts:
+
+    - name: Assertion
+      assert:
+        that:
+          - vbox_is_installed_command.stdout == "True"
+          - ansible_facts.services["vboxdrv.service"].state == "running"

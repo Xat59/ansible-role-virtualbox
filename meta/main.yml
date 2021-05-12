@@ -1,0 +1,17 @@
+galaxy_info:
+  role_name: virtualbox
+  author: xat
+  description: Ansible role that installs Oracle Virtualbox.
+  company: Scalair
+
+  license: Apache
+  min_ansible_version: 2.10
+
+  platforms:
+  - name: Fedora
+    versions:
+    - 34
+
+  galaxy_tags:
+  - virtualbox
+  - devops
