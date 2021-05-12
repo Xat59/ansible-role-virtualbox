@@ -26,11 +26,5 @@
     state: present
   register: vboxdrv_is_installed_command
   become: true
-
-- name: VIRTUALBOX | Start & enable vboxdrv service
-  service:
-    name: vboxdrv
-    state: started
-    enabled: true
-  when: vboxdrv_is_installed_command.changed
-  become: true
+  notify:
+    - VIRTUALBOX | Restart vboxdrv service

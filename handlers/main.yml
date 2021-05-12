@@ -1,0 +1,6 @@
+---
+- name: VIRTUALBOX | Restart vboxdrv service
+  service:
+    name: vboxdrv
+    state: restarted
+  become: true
