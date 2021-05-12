@@ -5,7 +5,9 @@
   yum_repository:
     name: virtualbox
     description: Fedora $releasever - $basearch - VirtualBox
-    baseurl: http://download.virtualbox.org/virtualbox/rpm/fedora/{{ ansible_facts['distribution_major_version'] }}/$basearch
+    baseurl: >-
+      http://download.virtualbox.org/virtualbox/rpm/fedora/
+      {{ ansible_facts['distribution_major_version'] }}/$basearch
     enabled: 1
     gpgcheck: 1
     repo_gpgcheck: 1

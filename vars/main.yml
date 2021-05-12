@@ -1,3 +1,5 @@
+---
+
 vboxdrv_required_packages_fedora34:
   - binutils
   - qt

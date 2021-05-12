@@ -9,7 +9,7 @@
       shell: '[ -x "$(command -v vboxmanage)" ] && echo "True" || echo "False"'
       register: vbox_is_installed_command
       changed_when: false
-    
+
     - name: Get service fact
       servicefacts:
 
